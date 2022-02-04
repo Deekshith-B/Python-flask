@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Roster
+        </title>
+    </head>
+    <body>
+        <div>
+            <a href='/'>Home</a><br>
+            <a href='/getroster'>Roster</a>
+        </div>
+        <hr>
+        <h1>Player Details</h1>
+        <h3>PPG=Points per game</h3>
+        <h3>APG=Assists per game</h3>
+        <h3>RPG=Rebounds per game</h3>    
+
+        <table border="2">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>PPG</th>
+                <th>APG</th>
+                <th>RPG</th>
+            </tr>
+            {% for player in Roster %}
+            <tr>
+                <td>{{player[0]}}</td>
+                <td>{{player[1]}}</td>
+                <td>{{player[2]}}</td>
+                <td>{{player[3]}}</td> 
+                <td>{{player[4]}}</td> 
+                <td><a href='/deleteplayer/{{player[0]}}'>Delete</a></td> 
+                <td><a href='/getplayer/{{player[0]}}'>Update</a></td>             
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

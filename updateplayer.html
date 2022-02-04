@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="post" action="/updateplayer">
+            
+            <table>
+                <tr>
+                    <th>Player Id</th>
+                    <td><input type="number" name="bid" value="{{player[0]}}" readonly></td>
+                </tr>
+                <tr>
+                    <th>Player Name</th>
+                    <td><input type="text" name="name" value="{{player[1]}}"></td>
+                </tr>
+                <tr>
+                    <th>Points per game</th>
+                    <td><input type="text" name="ppg" value="{{player[2]}}"></td>
+                </tr>
+                <tr>
+                    <th>Assists per game</th>
+                    <td><input type="text" name="apg" value="{{player[3]}}"></td>
+                </tr>
+                <tr>
+                    <th>Rebounds per game</th>
+                    <td><input type="text" name="rpg" value="{{player[4]}}"></td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Cancel"></td>
+                    <td><input type="submit" value="Update Player"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
